@@ -25,4 +25,5 @@
   --like-sparks-color: #f00;
 
   --button-text-color: var(--bg-color);
+  --button-border-color: var(--color-black);
 }
