@@ -324,8 +324,8 @@
   filter: saturate(200%);
 }
 
-.filter-invert {
-  filter: invert(100%);
+.filter-multi {
+  filter: invert(100%) brightness(103%);;
 }
 
 @media (width <= 375px) {
