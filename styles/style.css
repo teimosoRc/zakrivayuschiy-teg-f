@@ -300,6 +300,34 @@
   inline-size: 100%;
 }
 
+.filter-blur {
+  filter: blur(15px);
+}
+
+.filter-brightness {
+  filter: brightness(0.5);
+}
+
+.filter-grayscale {
+  filter: grayscale(100%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(90deg);
+}
+
+.filter-sepia {
+  filter: sepia(100%);
+}
+
+.filter-saturate {
+  filter: saturate(200%);
+}
+
+.filter-invert {
+  filter: invert(100%);
+}
+
 @media (width <= 375px) {
   .modal__card {
     margin-block-start: 52px;
