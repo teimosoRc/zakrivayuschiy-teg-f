@@ -34,14 +34,19 @@
   margin-inline: auto;
   border: 2px solid var(--text-color);
   background: var(--bg-color);
+  
 }
 
 .header {
+  inline-size: 100%;
   display: grid;
   justify-items: center;
   justify-content: center;
   font-family: var(--accent-font-family);
   text-transform: uppercase;
+  margin-block-end: 48px;
+  max-inline-size: 696px;
+  margin-inline: auto;
 }
 
 .page-title {
@@ -119,7 +124,7 @@
 .card__list {
   margin-inline: auto;
   margin-block-start: 50px;
-  max-inline-size: 696px;
+  max-inline-size: 700px;
   display: grid;
   gap: 52px;
 }
@@ -134,7 +139,7 @@
 .card__content {
   display: flex;
   flex-direction: column;
-  gap: 27px;
+  gap: 25px;
   padding: 25px;
   font-size: 18px;
   line-height: 21px;
@@ -197,8 +202,10 @@
 .button {
   position: relative;
   z-index: 1;
-  border: solid 2px #000;
-  padding: 12.5px 37px;
+  border: solid 2px var(--button-border-color);
+  /* padding: 8.5px 35px; */
+  padding-inline: 35px;
+  margin-block: 3px;
   font-family: var(--accent-font-family);
   font-size: 14px;
   text-transform: inherit;
@@ -206,6 +213,7 @@
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
+  line-height: 12.6px;
 }
 
 .button::before {
@@ -298,6 +306,7 @@
 
 .modal__button {
   inline-size: 100%;
+  padding-block: 12.5px;
 }
 
 .filter-blur {
