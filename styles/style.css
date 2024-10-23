@@ -27,26 +27,25 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" 400;
+  font-variation-settings: "wght" var(--main-font-weight);
 }
 
 .card {
   margin-inline: auto;
   border: 2px solid var(--text-color);
   background: var(--bg-color);
-  
 }
 
 .header {
-  inline-size: 100%;
   display: grid;
   justify-items: center;
   justify-content: center;
+  margin-inline: auto;
+  margin-block-end: 48px;
   font-family: var(--accent-font-family);
   text-transform: uppercase;
-  margin-block-end: 48px;
+  inline-size: 100%;
   max-inline-size: 696px;
-  margin-inline: auto;
 }
 
 .page-title {
@@ -98,10 +97,6 @@
   opacity: 0.6;
 }
 
-.theme-menu__button:focus-visible::after {
-  transform: scaleX(1);
-}
-
 .theme-menu__button:not(:disabled)::after {
   content: "";
   display: block;
@@ -121,19 +116,28 @@
   inset-block-start: 0;
 }
 
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .card__list {
+  display: grid;
+  gap: 52px;
   margin-inline: auto;
   margin-block-start: 50px;
   max-inline-size: 700px;
-  display: grid;
-  gap: 52px;
 }
-
 
 .card__title {
   margin: 4px 10px;
   font-size: 18px;
-  font-variation-settings: "wght" 700;
+  font-variation-settings: "wght" var(--second-font-weight);
 }
 
 .card__content {
@@ -147,6 +151,7 @@
 
 .card__img-wrapper {
   position: relative;
+  border-block: 2px solid var(--button-border-color);
   overflow: hidden;
 }
 
@@ -159,11 +164,12 @@
   font-size: 14px;
   text-shadow: 0 0 1px var(--bg-color);
   inset-block-start: 25px;
-  inset-inline-end: 25px;
+  inset-inline-end: 24px;
   mix-blend-mode: hard-light;
 }
 
 .card__img {
+  display: block;
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
@@ -183,6 +189,7 @@
 }
 
 .card__icon-button {
+  display: flex;
   border: 2px solid transparent;
   padding: 0;
   background: transparent;
@@ -203,17 +210,15 @@
   position: relative;
   z-index: 1;
   border: solid 2px var(--button-border-color);
-  /* padding: 8.5px 35px; */
   padding-inline: 35px;
-  margin-block: 3px;
   font-family: var(--accent-font-family);
   font-size: 14px;
+  line-height: 12.6px;
   text-transform: inherit;
   background: var(--bg-color);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
-  line-height: 12.6px;
 }
 
 .button::before {
@@ -250,7 +255,6 @@
 
 .modal__card {
   margin-inline: auto;
-  margin-block-start: 50px;
   margin-block-end: 105px;
 }
 
@@ -269,9 +273,8 @@
 }
 
 .modal::backdrop {
-  opacity: 0.8;
+  opacity: 0.75;
   background-color: #000;
-  backdrop-filter: blur(7px);
 }
 
 .modal {
@@ -283,7 +286,7 @@
   line-height: 21px;
   text-transform: uppercase;
   background: var(--bg-color);
-  max-inline-size: 349px;
+  max-inline-size: 355px;
 }
 
 .modal[open] {
@@ -305,8 +308,8 @@
 }
 
 .modal__button {
-  inline-size: 100%;
   padding-block: 12.5px;
+  inline-size: 100%;
 }
 
 .filter-blur {
@@ -334,21 +337,36 @@
 }
 
 .filter-multi {
-  filter: invert(100%) brightness(103%);;
+  filter: invert(100%) brightness(103%);
 }
 
 @media (width <= 375px) {
+  
+  .card__img-label {
+    inset-inline-end: 13px;
+  }
+
+  .modal {
+    padding: 30px 40px;
+    max-inline-size: 340px;
+  }
+
   .modal__card {
-    margin-block-start: 52px;
+    margin-block-start: 2px;
     margin-block-end: 100px;
   }
 
   .modal__card-save {
     flex-direction: column;
   }
+
+  .button__icon {
+    block-size: 28px;
+  }
 }
 
 @supports (-webkit-text-stroke: 1px var(--bg-color)) {
+
   .card__img-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--bg-color);

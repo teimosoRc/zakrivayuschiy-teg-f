@@ -18,6 +18,8 @@
   --text-color: var(--color-black);
   --button-text-color: var(--color-white);
   --button-border-color: var(--color-black);
+  --main-font-weight: 400;
+  --second-font-weight: 700;
 
   --like-main-body-color: none;
   --like-contour-color: var(--text-color);
@@ -33,9 +35,12 @@
   --text-color: var(--color-green);
   --button-text-color: var(--color-green);
   --button-border-color: var(--color-green);
+  --main-font-weight: 465;
+  --second-font-weight: 785;
 }
 
 @media (prefers-color-scheme: dark) {
+  
   :root {
     --bg-color: var(--color-black);
     --bg-image: repeating-linear-gradient(to left, #000 0 2px, #0000 2px 4px),
@@ -45,5 +50,7 @@
     --text-color: var(--color-green);
     --button-text-color: var(--color-green);
     --button-border-color: var(--color-green);
+    --main-font-weight: 465;
+    --second-font-weight: 785;
   }
 }
